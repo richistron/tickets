@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  # this model extends from devise
+  # @see https://github.com/plataformatec/devise
 end
