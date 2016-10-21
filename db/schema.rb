@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021012058) do
+ActiveRecord::Schema.define(version: 20161021212009) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20161021012058) do
     t.float    "ticket_cost"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.boolean  "fee_included"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
