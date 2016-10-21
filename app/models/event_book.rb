@@ -1,0 +1,2 @@
+class EventBook < ApplicationRecord
+end

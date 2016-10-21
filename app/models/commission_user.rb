@@ -1,0 +1,2 @@
+class CommissionUser < ApplicationRecord
+end

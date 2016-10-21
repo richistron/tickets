@@ -1,0 +1,2 @@
+class CommissionDefault < ApplicationRecord
+end
