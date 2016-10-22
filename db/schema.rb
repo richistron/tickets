@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022015546) do
+ActiveRecord::Schema.define(version: 20161022022730) do
 
   create_table "commission_defaults", force: :cascade do |t|
     t.datetime "created_at",        null: false
@@ -22,8 +22,14 @@ ActiveRecord::Schema.define(version: 20161022015546) do
   end
 
   create_table "commission_events", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "payment_method_id"
+    t.float    "amount"
+    t.boolean  "is_percentage"
+    t.integer  "event_id"
+    t.index ["event_id"], name: "index_commission_events_on_event_id"
+    t.index ["payment_method_id"], name: "index_commission_events_on_payment_method_id"
   end
 
   create_table "commission_users", force: :cascade do |t|
