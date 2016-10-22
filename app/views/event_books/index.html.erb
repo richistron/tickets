@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_books.each do |event_book| %>
+      <tr>
+        <td><%= link_to 'Show', event_book %></td>
+        <td><%= link_to 'Edit', edit_event_book_path(event_book) %></td>
+        <td><%= link_to 'Destroy', event_book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event Book', new_event_book_path %>
