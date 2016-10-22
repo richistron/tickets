@@ -1,24 +1,19 @@
-# README
+# Commissions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample system for commissions.
 
-Things you may want to cover:
+This is a group of models which handles all the bussiness logic inside the models
+so it can be wrapped into a gem. It only exposes 1 model `EventBook` which allows
+you to create new Events, there is also a ticket purchase feature ready to use.
 
-* Ruby version
+### Classes
 
-* System dependencies
+![img](http://i.imgur.com/MhFMzE4.png)
 
-* Configuration
+### Usage
 
-* Database creation
+```
+bundle
+rspec
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
