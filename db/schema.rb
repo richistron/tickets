@@ -10,11 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021230924) do
+ActiveRecord::Schema.define(version: 20161022015546) do
 
   create_table "commission_defaults", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "payment_method_id"
+    t.float    "amount"
+    t.boolean  "is_percentage"
+    t.index ["payment_method_id"], name: "index_commission_defaults_on_payment_method_id"
   end
 
   create_table "commission_events", force: :cascade do |t|
